@@ -1,5 +1,6 @@
 {
   "name": "client",
+  "homepage": "https://endy-guff.github.io/React-chat-client/",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
