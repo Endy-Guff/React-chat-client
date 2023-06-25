@@ -3,20 +3,20 @@ import s from './ThemeButton.module.css'
 import {ThemeType} from "../../App";
 
 type ThemeButtonPropsType = {
-    setTheme: (theme: ThemeType) => void
+  setTheme: (theme: ThemeType) => void
 }
 
 export const ThemeButton = (props: ThemeButtonPropsType) => {
 
-    const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) => {
-        const isPressed = e.currentTarget.matches("[aria-pressed=true]")
-        e.currentTarget.setAttribute("aria-pressed", isPressed ? 'false' : 'true');
-        props.setTheme(isPressed ? 'light' : 'dark')
-    }
+  const onClickHandler = (e: React.MouseEvent<HTMLButtonElement>) =>{
+    const isPressed = e.currentTarget.matches("[aria-pressed=true]")
+    e.currentTarget.setAttribute("aria-pressed", isPressed ? 'false' : 'true');
+    props.setTheme(isPressed ? 'light' : 'dark')
+  }
 
     return (
         <div className={s.wrapper}>
-            <button className={s.toggle} aria-pressed="false" title="Toggle Dark Mode" onClick={onClickHandler}>
+        <button className={s.toggle} aria-pressed="false" title="Toggle Dark Mode" onClick={onClickHandler}>
   <span className={s.toggle__content}>
     <svg aria-hidden='true' className={s.toggle__backdrop} xmlns="http://www.w3.org/2000/svg" fill="none"
          viewBox="0 0 290 228">
@@ -175,7 +175,7 @@ export const ThemeButton = (props: ThemeButtonPropsType) => {
       </span>
     </span>
   </span>
-            </button>
+        </button>
         </div>
     );
 };
