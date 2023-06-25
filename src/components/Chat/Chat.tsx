@@ -27,7 +27,7 @@ type messageRefValues = {
 }
 
 const io = require('socket.io-client');
-const socket = io.connect('http://localhost:5000');
+const socket = io.connect('https://online-chat-mvor.onrender.com');
 
 export const Chat = (props: ChatPropsType) => {
     const {search} = useLocation()
