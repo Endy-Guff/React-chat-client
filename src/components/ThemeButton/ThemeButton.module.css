@@ -92,9 +92,5 @@
     width: 100%;
     left: 0;
     transition: translate var(--speed) var(--easing);
-    -webkit-translate: 0 calc(var(--dark, 0) * (100% - (3 / 8 * var(--width))));
-    -moz-translate: 0 calc(var(--dark, 0) * (100% - (3 / 8 * var(--width))));
-    -o-translate: 0 calc(var(--dark, 0) * (100% - (3 / 8 * var(--width))));
-    -ms-translate: 0 calc(var(--dark, 0) * (100% - (3 / 8 * var(--width))));
     translate: 0 calc(var(--dark, 0) * (100% - (3 / 8 * var(--width))));
 }
