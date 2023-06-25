@@ -226,17 +226,17 @@
     transform-box: fill-box;
     transform-origin: 50% 50%;
 }
-.stars g:nth-of-type(3) :local{
-    animation: twinkle 4s -2s infinite;
-}
+/*.stars g:nth-of-type(3) :local{*/
+/*    animation: twinkle 4s -2s infinite;*/
+/*}*/
 
-.stars g:nth-of-type(11) :local{
-    animation: twinkle 6s -2s infinite;
-}
+/*.stars g:nth-of-type(11) :local{*/
+/*    animation: twinkle 6s -2s infinite;*/
+/*}*/
 
-.stars g:nth-of-type(9) :local{
-    animation: twinkle 4s -1s infinite;
-}
+/*.stars g:nth-of-type(9) :local{*/
+/*    animation: twinkle 4s -1s infinite;*/
+/*}*/
 
 @keyframes twinkle {
     0%,
@@ -310,7 +310,7 @@
 
 .pilot {
     rotate: 12deg;
-    animation: fly 4s infinite ease-in-out;
+    /*animation: fly 4s infinite ease-in-out;*/
 }
 
 @keyframes fly {
