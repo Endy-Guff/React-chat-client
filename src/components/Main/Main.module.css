@@ -1,0 +1,92 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(120.85deg, var(--myColor) 0%, var(--myColor2) 61.98%);
+    transition: --myColor .5s, --myColor2 .5s;
+}
+
+@property --myColor {
+    syntax: '<color>';
+    initial-value: #F5F8FF;
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #EDF4FE;
+    inherits: false;
+}
+
+@property --formColor1 {
+    syntax: '<color>';
+    initial-value: #FBFCFE;
+    inherits: false;
+}
+
+@property --formColor2 {
+    syntax: '<color>';
+    initial-value: #FAFBFF;
+    inherits: false;
+}
+
+.wrapper.dark{
+    --myColor: #18222D;
+    --myColor2: #18222D;
+}
+
+.wrapper.dark .form{
+    --formColor1: #22303F;
+    --formColor2: #22303F;
+    box-shadow: none;
+}
+
+.wrapper.dark .input{
+    background: #18222D;
+    box-shadow: none;
+    color: #fff;
+}
+
+.form{
+    width: 500px;
+    height: 300px;
+    background: linear-gradient(130.23deg, var(--formColor1) 0%, var(--formColor2) 71.47%);
+    box-shadow: 0px 12px 8px 1px rgba(225, 232, 242, 0.4);
+    border-radius: 25px;
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    gap: 35px;
+    transition: --formColor1 .5s, --formColor2 .5s, box-shadow .2s;
+}
+
+.input{
+    background: #fff;
+    border-radius: 15px;
+    border: none;
+    height: 50px;
+    box-shadow: 0px 12px 8px 1px rgba(225, 232, 242, 0.4);
+    padding: 15px;
+    transition: background .5s, box-shadow .2s;
+}
+
+.input::placeholder{
+    color: rgba(180, 180, 180, 0.9);
+}
+
+.btn{
+    width: 90px;
+    height: 35px;
+    cursor: pointer;
+    background: linear-gradient(130.23deg, #A88CF9 0%, #646EEC 20%, #646EEC 100%);
+    background-size: 1px 200px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: .3s;
+}
+
+.btn:hover{
+    background-position: 100px;
+}

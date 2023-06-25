@@ -1,0 +1,206 @@
+.wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 20px;
+    height: 100vh;
+    background: linear-gradient(120.85deg, var(--myColor) 0%, var(--myColor2) 61.98%);
+    transition: --myColor .5s, --myColor2 .5s;
+}
+
+@property --myColor {
+    syntax: '<color>';
+    initial-value: #F5F8FF;
+    inherits: false;
+}
+
+@property --myColor2 {
+    syntax: '<color>';
+    initial-value: #EDF4FE;
+    inherits: false;
+}
+
+@property --fieldColor1 {
+    syntax: '<color>';
+    initial-value: #FBFCFE;
+    inherits: false;
+}
+
+@property --fieldColor2 {
+    syntax: '<color>';
+    initial-value: #FAFBFF;
+    inherits: false;
+}
+
+.wrapper.dark{
+    --myColor: #18222D;
+    --myColor2: #18222D;
+}
+
+.wrapper.dark .inner,
+.wrapper.dark .desc{
+    --fieldColor1: #22303F;
+    --fieldColor2: #22303F;
+    box-shadow: none
+}
+
+.wrapper.dark .desc .roomName{
+    color: #B2C3D4;
+}
+
+.wrapper.dark .desc .users{
+    color: rgba(255,255,255,.6);
+}
+
+.wrapper.dark .input{
+    background: #18222D;
+    box-shadow: none;
+    color: #fff;
+}
+
+.inner,
+.desc{
+    background: linear-gradient(130.23deg, var(--fieldColor1) 0%, var(--fieldColor2) 71.47%);
+    border-radius: 25px;
+    box-shadow: 0px 12px 8px 1px rgba(225, 232, 242, 0.4);
+    transition: --fieldColor1 .5s, --fieldColor2 .5s, box-shadow .2s;
+}
+
+.desc{
+    max-width: 800px;
+    width: 100%;
+    min-height: 100px;
+}
+
+.inner{
+    max-width: 800px;
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    position: relative;
+}
+
+.messages{
+    width: 100%;
+    height: 100%;
+    overflow-y: scroll;
+    padding: 20px 20px 0;
+}
+
+.messageIndicator{
+    position: absolute;
+    width: 30px;
+    height: 30px;
+    background: #fff;
+    color: rgba(180, 180, 180, 0.9);
+    border-radius: 50%;
+    right: 30px;
+    bottom: 90px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: 0px 12px 8px 1px rgba(225, 232, 242, 0.4);
+    cursor: pointer;
+    transition: .5s;
+}
+
+.dark .messageIndicator{
+    background: #18222D;
+    color: #fff;
+    box-shadow: none;
+}
+
+.form{
+    position: relative;
+    padding: 0 20px 20px;
+}
+
+.input{
+    background: #fff;
+    border-radius: 15px;
+    border: none;
+    height: 65px;
+    width: 100%;
+    box-shadow: 0px 12px 8px 1px rgba(225, 232, 242, 0.4);
+    padding: 15px 80px 15px 15px;
+    transition: background .5s, box-shadow .2s;
+}
+
+.input::placeholder{
+    color: rgba(180, 180, 180, 0.9);
+}
+
+.messageBtn{
+    position: absolute;
+    width: 60px;
+    height: 35px;
+    cursor: pointer;
+    background: linear-gradient(130.23deg, #A88CF9 0%, #646EEC 20%, #646EEC 100%);
+    background-size: 1px 200px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: .3s;
+
+    right: 30px;
+    top: 50%;
+    margin-top: -27.5px;
+}
+
+.messageBtn:hover{
+    background-position: 100px;
+}
+
+.desc{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.inf{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 5px;
+}
+
+.roomName{
+    font-weight: 600;
+    font-size: 25px;
+    color: #001976;
+    transition: color .5s;
+}
+
+.users{
+    color: rgba(0,0,0,.6);
+    transition: color .5s;
+}
+
+.left{
+    width: 60px;
+    height: 35px;
+    cursor: pointer;
+    background: linear-gradient(130.23deg, #A88CF9 0%, #646EEC 20%, #646EEC 100%);
+    background-size: 1px 200px;
+    border: none;
+    border-radius: 10px;
+    color: #fff;
+    transition: .3s;
+}
+
+.left:hover{
+    background-position: 100px;
+}
+
+.messageItem-enter {
+    opacity: 0;
+}
+.messageItem-enter-active {
+    opacity: 1;
+    transition: opacity 500ms ease-in;
+}

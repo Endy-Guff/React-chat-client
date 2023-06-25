@@ -1,0 +1,75 @@
+.me .message{
+    background: #7500FF;
+    border-radius: 10px 10px 0 10px;
+    max-width: 400px;
+    height: auto;
+    word-break:break-all;
+}
+
+.user .message{
+    background: #ECF3FD;
+    border-radius: 10px 10px 10px 0;
+    max-width: 400px;
+    height: auto;
+    transition: .5s;
+    word-break:break-all;
+}
+
+.user .dark .message{
+    background: #18222D;
+    color: #fff;
+}
+
+.admin{
+    color: rgba(0,0,0,.6);
+    text-align: center;
+}
+
+.admin .inner{
+    flex-direction: column-reverse;
+}
+
+.admin .inner.dark .message{
+    color: rgba(222, 222, 222, .3);
+}
+
+.admin .message{
+    font-size: 12px;
+    color: rgba(0,0,0,.6);
+    transition: .5s;
+}
+
+.me .message,
+.user .message{
+    color: #fff;
+    padding: 5px 10px;
+}
+
+.user .message{
+    color: #737D87;
+}
+
+.me .inner{
+    align-items: flex-end;
+}
+
+.user .inner{
+    align-items: flex-start;
+}
+
+.userName{
+    font-size: 10px;
+    color: rgba(0,0,0,.6);
+    transition: .5s;
+}
+
+.dark .userName{
+    color: rgba(222, 222, 222, .3);
+}
+
+.inner{
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+}
+
