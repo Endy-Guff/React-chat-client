@@ -5,6 +5,7 @@
     height: 100vh;
     background: linear-gradient(120.85deg, var(--myColor) 0%, var(--myColor2) 61.98%);
     transition: --myColor .5s, --myColor2 .5s;
+    padding: 0 15px;
 }
 
 @property --myColor {
